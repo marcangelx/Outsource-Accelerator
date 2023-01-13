@@ -6,7 +6,6 @@ export const Hamburger = () => {
     const onShowMenu = (e) => {
         e.preventDefault();
         setDisplayStyle(!displayStyle);
-        console.log(displayStyle);
     };
     return (
         <>

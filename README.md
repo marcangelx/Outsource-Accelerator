@@ -1,4 +1,4 @@
-## Laravel Sail Project
+# Laravel | React
 
 ## Ubuntu/Linux users continue here:
 
@@ -14,64 +14,17 @@ Generate data
 
 -   Run `sail artisan migrate:fresh --seed` to create tables
 
+-   Run `sail artisan Test` to test the APIs
+
 ## API Documentation
 
 ```
-Get api/user -> get all user
+Get api/user -> get all users
 ```
 
-```json
-{
-    "data": [
-        {
-            "id": "1",
-            "attributes": {
-                "email": "wintheiser.ashley@wehner.com",
-                "name": "Mrs. Karine Cormier DDS",
-                "ip_address": "63.138.19.120",
-                "referrer": "gmail.com",
-                "user_agent": "Mozilla/5.0 (X11; Linux x86_64; rv:7.0) Gecko/20110824 Firefox/37.0",
-                "path": [
-                    {
-                        "path": "https://via.placeholder.com/640x480.png/005544?text=animals+dicta"
-                    },
-                    {
-                        "path": "https://via.placeholder.com/640x480.png/004444?text=animals+dolores"
-                    },
-                    {
-                        "path": "https://via.placeholder.com/640x480.png/0088bb?text=animals+aut"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "2",
-            "attributes": {
-                "email": "lockman.adrain@gmail.com",
-                "name": "Myrl Ratke DVM",
-                "ip_address": "154.6.94.230",
-                "referrer": "hotmail.com",
-                "user_agent": "Mozilla/5.0 (Macintosh; PPC Mac OS X 10_8_4 rv:4.0) Gecko/20130311 Firefox/37.0",
-                "path": [
-                    {
-                        "path": "https://via.placeholder.com/640x480.png/00ee33?text=animals+cupiditate"
-                    },
-                    {
-                        "path": "https://via.placeholder.com/640x480.png/000066?text=animals+aspernatur"
-                    },
-                    {
-                        "path": "https://via.placeholder.com/640x480.png/00ccbb?text=animals+sit"
-                    }
-                ]
-            }
-        }
-    ]
-}
-```
+Get /user/{id} -> get user by id
 
-```
-Get /user/{id} -> get assessment by id
-```
+````
 
 ```json
 {
@@ -97,7 +50,7 @@ Get /user/{id} -> get assessment by id
         }
     }
 }
-```
+````
 
 ```
 POST /user -> Create assessment
@@ -111,12 +64,21 @@ POST /user -> Create assessment
 
 ## Front Documentation
 
-## React Project
-
-## Windows, Mac Os, Ubuntu/Linux users continue here:
-
 -   Go to react directory `cd react`.
 -   Run `npm install` and `npm run dev`
+
+## Tools/Tech:
+
+##The static page is divided into three components:
+
+-   Navbar.jsx (Navigation bar)
+-   Main.jsx (Banner content)
+-   Content.jsx(Image)
+    ![Alt text](components-image.jpg?raw=true "Title")
+
+-   I have used plain css media query for responsiveness of the page
+-   CSS flex to manipulate the position of the components
+-   useState hook for Navigation menu of mobile
 
 Thank you
 Regards, Marc Angel

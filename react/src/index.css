@@ -1,0 +1,12 @@
+body,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.company-logo {
+    margin: 40px 0 40px 0;
+}
+.company-logo img {
+    width: 7rem;
+}

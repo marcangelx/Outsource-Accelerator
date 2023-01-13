@@ -1,66 +1,122 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Laravel Sail Project
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Ubuntu/Linux users continue here:
 
-## About Laravel
+-   Download composer https://getcomposer.org/download/
+-   Pull Laravel/php project from git provider.
+-   Open the console and cd your project root directory
+-   Run Docker Desktop Application.
+-   Add a shell alias `alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'`(optional).
+-   Run `sail composer install` or `sail composer.phar install`.
+-   Run `sail up -d ` or `./vendor/bin/sail up `to run the server.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Generate data
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   Run `sail artisan migrate:fresh --seed` to create tables
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## API Documentation
 
-## Learning Laravel
+```
+Get api/user -> get all user
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```json
+{
+    "data": [
+        {
+            "id": "1",
+            "attributes": {
+                "email": "wintheiser.ashley@wehner.com",
+                "name": "Mrs. Karine Cormier DDS",
+                "ip_address": "63.138.19.120",
+                "referrer": "gmail.com",
+                "user_agent": "Mozilla/5.0 (X11; Linux x86_64; rv:7.0) Gecko/20110824 Firefox/37.0",
+                "path": [
+                    {
+                        "path": "https://via.placeholder.com/640x480.png/005544?text=animals+dicta"
+                    },
+                    {
+                        "path": "https://via.placeholder.com/640x480.png/004444?text=animals+dolores"
+                    },
+                    {
+                        "path": "https://via.placeholder.com/640x480.png/0088bb?text=animals+aut"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "2",
+            "attributes": {
+                "email": "lockman.adrain@gmail.com",
+                "name": "Myrl Ratke DVM",
+                "ip_address": "154.6.94.230",
+                "referrer": "hotmail.com",
+                "user_agent": "Mozilla/5.0 (Macintosh; PPC Mac OS X 10_8_4 rv:4.0) Gecko/20130311 Firefox/37.0",
+                "path": [
+                    {
+                        "path": "https://via.placeholder.com/640x480.png/00ee33?text=animals+cupiditate"
+                    },
+                    {
+                        "path": "https://via.placeholder.com/640x480.png/000066?text=animals+aspernatur"
+                    },
+                    {
+                        "path": "https://via.placeholder.com/640x480.png/00ccbb?text=animals+sit"
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```
+Get /user/{id} -> get assessment by id
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```json
+{
+    "data": {
+        "id": "5",
+        "attributes": {
+            "email": "aric.dickens@johnston.com",
+            "name": "Jeanette Windler",
+            "ip_address": "102.57.142.51",
+            "referrer": "yahoo.com",
+            "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/5361 (KHTML, like Gecko) Chrome/39.0.888.0 Mobile Safari/5361",
+            "path": [
+                {
+                    "path": "https://via.placeholder.com/640x480.png/005511?text=animals+aut"
+                },
+                {
+                    "path": "https://via.placeholder.com/640x480.png/00aa55?text=animals+alias"
+                },
+                {
+                    "path": "https://via.placeholder.com/640x480.png/001188?text=animals+eum"
+                }
+            ]
+        }
+    }
+}
+```
 
-## Laravel Sponsors
+```
+POST /user -> Create assessment
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+| Parameter               | Type     | Default | Description |
+| ----------------------- | -------- | ------- | ----------- |
+| `name` (required)       | `String` | `none`  | Name        |
+| `email` (required)      | `String` | `none`  | email       |
+| `ip_address` (required) | `String` | `none`  | ip address  |
 
-### Premium Partners
+## Front Documentation
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## React Project
 
-## Contributing
+## Windows, Mac Os, Ubuntu/Linux users continue here:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+-   Go to react directory `cd react`.
+-   Run `npm install` and `npm run dev`
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Thank you
+Regards, Marc Angel

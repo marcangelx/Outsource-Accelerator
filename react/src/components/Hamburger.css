@@ -1,34 +1,47 @@
 /* Style the navigation menu */
-.topnav {
+div.mobile-menu {
     overflow: hidden;
     position: relative;
-    box-sizing: border-box;
+    display: none;
+    flex-direction: row;
+    background-color: #fff;
+    justify-content: flex-start;
+    align-items: center;
+}
+div.mobile-menu .company-logo {
+    margin: 0;
+}
+/* Hide the links inside the navigation menu (except for logo/home) */
+div.mobile-menu #myLinks {
     display: none;
 }
 
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-    display: none;
-    background-color: grey;
-    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+div.mobile-menu #myLinks a {
+    padding: 3vh 16px;
+    text-decoration: none;
+    font-size: 2.5vw;
+    display: block;
+
+    cursor: pointer;
+
+    color: rgb(98, 96, 96);
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    width: auto;
 }
 
 /* Style navigation menu links */
-.topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    text-align: center;
-    display: block;
+div.mobile-menu #myLinks i {
+    color: rgb(23, 96, 241);
 }
 
 /* Style the hamburger menu */
-.topnav a.icon-burger {
+div.mobile-menu a.icon-burger {
     display: block;
     position: absolute;
     right: 0;
     top: 0;
     color: grey;
-    font-size: 4vh;
+    font-size: 7vh;
+    text-decoration: none;
 }

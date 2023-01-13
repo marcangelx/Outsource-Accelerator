@@ -1,17 +1,17 @@
 import "./Navbar.css";
-import oaLogo from "../assets/oa-logo.png";
+import Logo from "../assets/oa-logo.png";
 
 export const Navbar = () => {
     return (
-        <div className="container-nav">
+        <div className="container-navbar">
             <nav>
                 <span className="nav-toggle" id="js-nav-toggle">
                     <i className="fas fa-bars"></i>
                 </span>
-                <div className="logo">
-                    <img src={oaLogo} />
+                <div className="company-logo">
+                    <img src={Logo} />
                 </div>
-                <ul id="js-menu">
+                <ul className="navbar-menu">
                     <li>About OA</li>
                     <li>About SP</li>
                     <li>Login</li>

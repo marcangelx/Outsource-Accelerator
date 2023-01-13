@@ -1,0 +1,111 @@
+div.content-main {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    margin: 3vw;
+}
+div.content-main .banner {
+    margin-bottom: 3vh;
+}
+div.content-main .banner h1 {
+    margin: 0;
+    font-size: 4vw;
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+    line-height: 4vw;
+}
+
+div.content-main .banner #second-text-first-line {
+    color: #0058ff;
+}
+
+div.content-main .details {
+    font-size: 1.5vw;
+    font-weight: 400;
+    line-height: 30px;
+    color: #6b7280;
+    font-family: "Poppins";
+}
+
+div.content-main .details p {
+    width: 500px;
+    text-align: justify;
+}
+div.content-main .button-container button {
+    font-size: 1.5vw;
+    font-weight: 600;
+    background-color: #0058ff;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 2vw 3vw;
+    margin: 2vw 2vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+div.content-main .button-container button:last-child {
+    background-color: #e5edff;
+    color: #0058ff;
+}
+
+/* responsive styling*/
+@media only screen and (max-width: 1300px) {
+    .content-rightside {
+        display: none;
+    }
+    .content-leftside,
+    .content-main {
+        width: 100%;
+    }
+    div.container-navbar {
+        justify-content: center;
+    }
+    div.content-main {
+        align-items: center;
+        margin: 0;
+    }
+
+    div.content-main .banner h1 {
+        font-size: 6vw;
+        line-height: 7vw;
+    }
+
+    div.content-main .details {
+        font-size: 2vw;
+    }
+}
+
+/* Mobile size */
+@media only screen and (max-width: 800px) {
+    .container-navbar {
+        display: none;
+    }
+    div.mobile-menu {
+        display: block;
+        box-shadow: 0 50px 60px 0 #24324226;
+        background-color: rgba(255, 255, 255);
+    }
+    div.content-main .banner {
+        margin-top: 10vw;
+    }
+    div.content-main .banner h1 {
+        font-size: 8vw;
+        line-height: 60px;
+    }
+    div.content-main .details,
+    div.content-main .button-container {
+        align-items: center;
+        font-size: 3vw;
+    }
+    div.content-main .details p {
+        width: 60vw;
+    }
+    div.content-main .button-container button {
+        font-size: 3vw;
+        padding: 3vw 4vw;
+        margin: 3vw 3vw;
+    }
+}
